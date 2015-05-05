@@ -7,6 +7,12 @@ GIT
       carrierwave (>= 0.5.8)
       rails (>= 3.2.0)
 
+GIT
+  remote: https://github.com/net-ssh/net-ssh
+  revision: 01c356faffaec7c49c82c861d524edab719673a6
+  specs:
+    net-ssh (2.9.3.beta1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,6 +62,12 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
+    capistrano-bundler (1.1.4)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-rails (1.1.3)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -103,7 +115,6 @@ GEM
     mysql2 (0.3.18)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (2.9.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -208,13 +219,14 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  capistrano
+  capistrano-rails
   coffee-rails (~> 4.1.0)
   devise
   jbuilder (~> 2.0)
   jquery-rails
   mailboxer!
   mysql2
+  net-ssh!
   rails (= 4.2.1)
   rspec
   rspec-rails

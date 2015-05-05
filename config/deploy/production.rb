@@ -1,3 +1,5 @@
+set :stage, :production
+server "10.0.3.109", :roles => [ :app, :web, :db], :primary => true, :user => 'webwerks'
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
